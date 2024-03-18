@@ -179,6 +179,7 @@ File dan nama direktori apa pun yang dimasukkan ke dalam view()fungsi HARUS coco
 
 Masukkan perintah "php spark serve" pada cmd terminal. Kemudian akan muncul alamat localhost. Untuk memulai server web, dapat diakses pada port 8080. Jika Anda mengatur field lokasi di browser Anda ke localhost:8080, Anda akan melihat halaman selamat datang CodeIgniter.
 
+<img width="544" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/177ebefc-d158-47c0-ac7d-efabfc789e69">
 
 
 
