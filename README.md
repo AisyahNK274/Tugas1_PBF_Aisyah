@@ -79,10 +79,20 @@ Tambahkan baris berikut, setelah arahan rute untuk '/'
 
 <img width="345" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/c752e68c-7670-4c9c-bd86-b70cd68ea603">
 
-> Pemetaan Rute Pertama : Pada baris pertama, terdapat pernyataan $routes->get('pages', [Pages::class, 'index']);. Ini adalah cara untuk menetapkan rute untuk permintaan ke URL yang memiliki path 'pages'. Ketika URL seperti itu diakses, itu akan mengarah ke method index dalam controller Pages. Ini berarti ketika pengguna mengakses URL /pages, controller Pages akan menangani permintaan tersebut dan menjalankan method index.
+>Pemetaan Rute Pertama : Pada baris pertama, terdapat pernyataan $routes->get('pages', [Pages::class, 'index']);. Ini adalah cara untuk menetapkan rute untuk permintaan ke URL yang memiliki path 'pages'. Ketika URL seperti itu diakses, itu akan mengarah ke method index dalam controller Pages. Ini berarti ketika pengguna mengakses URL /pages, controller Pages akan menangani permintaan tersebut dan menjalankan method index.
 
-> Pemetaan Rute Kedua : Pada baris kedua, terdapat pernyataan $routes->get('(:segment)', [Pages::Class, 'view']);. Ini adalah contoh dari apa yang disebut sebagai "Wildcard Route" atau rute dengan parameter. Ini akan menangani permintaan untuk URL apapun yang hanya memiliki satu segment (bagian path). (:segment) adalah pola placeholder yang akan cocok dengan segmen apa pun dalam URL. Ini memungkinkan untuk menangani URL yang dinamis.
+>Pemetaan Rute Kedua : Pada baris kedua, terdapat pernyataan $routes->get('(:segment)', [Pages::Class, 'view']);. Ini adalah contoh dari apa yang disebut sebagai "Wildcard Route" atau rute dengan parameter. Ini akan menangani permintaan untuk URL apapun yang hanya memiliki satu segment (bagian path). (:segment) adalah pola placeholder yang akan cocok dengan segmen apa pun dalam URL. Ini memungkinkan untuk menangani URL yang dinamis.
 
 - Membuat Pengontrol Halaman
+  
+<img width="278" alt="Screenshot 2024-03-18 114619" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/a04ee256-296f-43fa-8373-50cc69a2926d">
 
-Kelas Pages memperluas BaseControllerkelas yang memperluas CodeIgniter\Controllerkelas. Ini berarti bahwa kelas Pages baru dapat mengakses metode dan properti yang ditentukan dalam CodeIgniter\Controllerkelas ( system/Controller.php ).
+Kelas Pages memperluas BaseControllerkelas yang memperluas CodeIgniter\Controllerkelas. Ini berarti bahwa kelas Pages baru dapat mengakses metode dan properti yang ditentukan dalam CodeIgniter\Controllerkelas (system/Controller.php).
+
+- Membuat tampilan
+  
+Buat header di app/Views/templates/header.php dan tambahkan kode berikut :
+
+Header berisi kode HTML dasar yang ingin Anda tampilkan sebelum memuat tampilan utama, bersama dengan judul. Ini juga akan menampilkan $titlevariabel, yang akan kita definisikan nanti di pengontrol. Sekarang, buat footer di app/Views/templates/footer.php yang menyertakan kode berikut :
+
+- Menambahkan logika ke Controller
