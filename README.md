@@ -274,3 +274,31 @@ $routes->get('(:segment)', [Pages::class, 'view']);
 ```
 
 Hal ini memastikan permintaan mencapai Newspengontrol alih-alih langsung ke Pagespengontrol. Baris kedua $routes->get()merutekan URI dengan slug ke show()metode di Newspengontrol.
+
+- Buat pengontrol berita
+
+Buat pengontrol baru di app/Controllers/News.php dengan kode berikut :
+```
+<?php
+
+namespace App\Controllers;
+
+use App\Models\NewsModel;
+
+class News extends BaseController
+{
+    public function index()
+    {
+        $model = model(NewsModel::class);
+
+        $data['news'] = $model->getNews();
+    }
+
+    public function show($slug = null)
+    {
+        $model = model(NewsModel::class);
+
+        $data['news'] = $model->getNews($slug);
+    }
+}
+```
