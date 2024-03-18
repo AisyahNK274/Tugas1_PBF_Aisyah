@@ -70,4 +70,7 @@ Pada bagian ini dibagi menjadi 3 yaitu :
 - Menetapkan Aturan Perutean
   
   Caranya buka file rute yang terletak di app/Config/Routes.php
+  
+  <img width="284" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/dfe6aa8b-7911-4221-a4ca-684f6ad02df0">
 
+Pada gambar diatas ada sebuah pemetaan rute dengan menggunakan metode get() dari objek $routes. Rute ini akan menangani permintaan yang datang ke URL root ('/') dan akan mengeksekusi method index dari controller Home. Ini adalah cara untuk menentukan bahwa ketika pengguna mengakses halaman utama situs web (URL root), method index dari controller Home akan dipanggil untuk menangani permintaan tersebut.
