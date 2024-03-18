@@ -181,5 +181,17 @@ Masukkan perintah "php spark serve" pada cmd terminal. Kemudian akan muncul alam
 
 <img width="544" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/177ebefc-d158-47c0-ac7d-efabfc789e69">
 
+2. Buat Item Berita
 
+- Buat database untuk digunakan
 
+- Hubungkan ke Basis Data
+
+File konfigurasi lokal, .env , yang telah  di buat saat menginstal CodeIgniter, harus memiliki pengaturan properti database yang tidak diberi komentar dan disetel dengan tepat untuk database yang ingin digunakan.
+```
+database.default.hostname = localhost
+database.default.database = ci4
+database.default.username = root
+database.default.password = root
+database.default.DBDriver = MySQLi
+```s
