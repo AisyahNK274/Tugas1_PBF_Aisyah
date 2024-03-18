@@ -45,11 +45,29 @@
 
   1. Download file zip dari CodeIgniter 4 melalui website resminya.
   
-  ![image](https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/f5e0377d-9231-4980-99de-5e35e7f3721d)
+     <img width="549" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/8bd18db8-04bb-4b10-8e52-7f914828b70f">
 
   2. Setelah file CodeIgniter 4 berhasil terdownload, pindahkan file ke folder C:/xampp/htdocs. Kemudian, extract file zip tersebut dan ubah namanya sesuai dengan nama project yang Anda inginkan. 
   
   3. Project CodeIgniter ini sudah bisa langsung dijalankan di web browser Anda dengan mengakses localhost/ci4/public.
 
-     <img width="546" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/4ea196d7-d731-4e72-9fab-6a9e9a4c01ed">
+      <img width="546" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/4ea196d7-d731-4e72-9fab-6a9e9a4c01ed">
+
+### 3. Membuat Aplikasi Berita Dasar
+
+Pada bagian ini dibagi menjadi 3 yaitu :
+
+- Halaman statis , yang akan mengajarkan Anda dasar-dasar pengontrol, tampilan, dan perutean.
+
+- Bagian Berita , tempat Anda akan mulai menggunakan model dan melakukan beberapa operasi basis data dasar.
+
+- Buat item berita , yang akan memperkenalkan operasi database lebih lanjut dan validasi formulir.
+
+#### Penjelasan
+
+1. Halaman Statis
+
+- Menetapkan Aturan Perutean
+  
+  Caranya buka file rute yang terletak di app/Config/Routes.php
 
