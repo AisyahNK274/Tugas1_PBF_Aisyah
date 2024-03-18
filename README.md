@@ -87,6 +87,7 @@ Buat header di app/Views/templates/header.php dan tambahkan kode berikut :
     <h1><?= esc($title) ?></h1>
 ```
 Header berisi kode HTML dasar yang ingin Anda tampilkan sebelum memuat tampilan utama, bersama dengan judul. Ini juga akan menampilkan $titlevariabel, yang akan kita definisikan nanti di pengontrol. Sekarang, buat footer di app/Views/templates/footer.php yang menyertakan kode berikut :
+
 ```
 <em>&copy; 2022</em>
 </body>
@@ -94,8 +95,11 @@ Header berisi kode HTML dasar yang ingin Anda tampilkan sebelum memuat tampilan 
 ```
 - Menambahkan logika ke Controller
 Badan halaman statis akan ditempatkan di direktori app/Views/pages. Di direktori itu, buatlah dua file bernama home.php dan about.php. Di dalam file tersebut, ketikkan beberapa teks - apa pun yang Anda suka - dan simpan.
+
 <img width="99" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/b94bf39c-8b5e-49ba-b6b5-624890fa45f4">
+
 - Melengkapi halaman view() dengan menyertakan kode berikut :
+  
 ```
 <?php
 namespace App\Controllers;
@@ -122,6 +126,7 @@ Di templat header, $titlevariabel digunakan untuk menyesuaikan judul halaman. Ni
 Hal terakhir yang harus dilakukan adalah memuat tampilan sesuai urutan tampilannya. Fungsi view()bawaan CodeIgniter akan digunakan untuk melakukan hal ini. Parameter kedua dalam view() fungsi digunakan untuk meneruskan nilai ke tampilan. Setiap nilai dalam $dataarray ditugaskan ke variabel dengan nama kuncinya. Jadi nilai $data['title']di controller setara dengan $titledi view.
 #### Catatan!! 
 File dan nama direktori apa pun yang dimasukkan ke dalam view()fungsi HARUS cocok dengan huruf besar dan kecil dari direktori sebenarnya dan nama file itu sendiri atau sistem akan memunculkan kesalahan pada platform yang peka huruf besar/kecil.
+
 - Menjalankan Aplikasi
 Masukkan perintah "php spark serve" pada cmd terminal. Kemudian akan muncul alamat localhost. Untuk memulai server web, dapat diakses pada port 8080. Jika Anda mengatur field lokasi di browser Anda ke localhost:8080, Anda akan melihat halaman selamat datang CodeIgniter.
 <img width="544" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/177ebefc-d158-47c0-ac7d-efabfc789e69">
@@ -235,6 +240,7 @@ class News extends BaseController
     // ...
 }
 ```
+
 Kode di atas mengambil semua catatan berita dari model dan menugaskannya ke variabel. Nilai judul juga ditetapkan ke $data['title'] elemen dan semua data diteruskan ke tampilan. Anda sekarang perlu membuat tampilan untuk merender item berita.
 - Buat file tampilan berita/indeks
 Buat app/Views/news/index.php dan tambahkan potongan kode berikut.
@@ -315,6 +321,7 @@ Responsnya memberi tahu klien versi spesifikasi HTTP apa yang digunakannya dan, 
 
 ```
 Meskipun PHP menyediakan cara untuk berinteraksi dengan header permintaan dan respons, CodeIgniter, seperti kebanyakan kerangka kerja, mengabstraksikannya sehingga Anda memiliki antarmuka yang konsisten dan sederhana. Kelas IncomingRequest adalah representasi permintaan HTTP berorientasi objek. Ini menyediakan semua yang Anda butuhkan:
+```
 <?php
 use CodeIgniter\HTTP\IncomingRequest;
 $request = request();
