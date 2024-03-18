@@ -307,3 +307,35 @@ BaseController memperluas kelas inti CodeIgniter, Controlleryang menyediakan beb
 Berikutnya, ada dua metode, satu untuk melihat semua item berita, dan satu lagi untuk item berita tertentu.
 
 Selanjutnya, model()fungsi tersebut digunakan untuk membuat NewsModelinstance. Ini adalah fungsi pembantu. Anda dapat membaca lebih lanjut tentangnya di Fungsi dan Konstanta Global . Anda juga bisa menulis , jika Anda tidak menggunakannya.$model = new NewsModel();
+
+
+- Berita lengkap::index() Metode
+
+Ubah index()metodenya menjadi seperti ini:
+```
+<?php
+
+namespace App\Controllers;
+
+use App\Models\NewsModel;
+
+class News extends BaseController
+{
+    public function index()
+    {
+        $model = model(NewsModel::class);
+
+        $data = [
+            'news'  => $model->getNews(),
+            'title' => 'News archive',
+        ];
+
+        return view('templates/header', $data)
+            . view('news/index')
+            . view('templates/footer');
+    }
+
+    // ...
+}
+```
+Kode di atas mengambil semua catatan berita dari model dan menugaskannya ke variabel. Nilai judul juga ditetapkan ke $data['title'] elemen dan semua data diteruskan ke tampilan. Anda sekarang perlu membuat tampilan untuk merender item berita.
