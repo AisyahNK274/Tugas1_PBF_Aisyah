@@ -255,7 +255,7 @@ Dua metode yang digunakan di sini, findAll()dan first(), disediakan oleh CodeIgn
 
 Setelah kueri ditulis, model harus dikaitkan dengan tampilan yang akan menampilkan item berita kepada pengguna. Ini bisa dilakukan di Pagespengontrol yang kami buat sebelumnya, tetapi demi kejelasan, Newspengontrol baru telah ditentukan.
 
--Menambahkan Aturan Perutean
+- Menambahkan Aturan Perutean
 
 Ubah file app/Config/Routes.php dengan kode berikut :
 ```
@@ -302,3 +302,8 @@ class News extends BaseController
     }
 }
 ```
+BaseController memperluas kelas inti CodeIgniter, Controlleryang menyediakan beberapa metode pembantu, dan memastikan bahwa Anda memiliki akses ke objek saat ini Requestdan Response, serta Loggerkelas tersebut, untuk menyimpan informasi ke disk.
+
+Berikutnya, ada dua metode, satu untuk melihat semua item berita, dan satu lagi untuk item berita tertentu.
+
+Selanjutnya, model()fungsi tersebut digunakan untuk membuat NewsModelinstance. Ini adalah fungsi pembantu. Anda dapat membaca lebih lanjut tentangnya di Fungsi dan Konstanta Global . Anda juga bisa menulis , jika Anda tidak menggunakannya.$model = new NewsModel();
