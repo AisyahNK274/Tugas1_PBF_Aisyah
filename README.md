@@ -448,3 +448,83 @@ Content-Type: text/html; charset=UTF-8
 ```
 
 Responsnya memberi tahu klien versi spesifikasi HTTP apa yang digunakannya dan, mungkin yang paling penting, kode status (200). Kode status adalah salah satu dari sejumlah kode yang telah distandarisasi agar memiliki arti yang sangat spesifik bagi klien. Ini dapat memberi tahu mereka bahwa halaman tersebut berhasil (200), atau bahwa halaman tersebut tidak ditemukan (404). 
+
+- Bekerja dengan permintaan dan tanggapan
+
+```
+Meskipun PHP menyediakan cara untuk berinteraksi dengan header permintaan dan respons, CodeIgniter, seperti kebanyakan kerangka kerja, mengabstraksikannya sehingga Anda memiliki antarmuka yang konsisten dan sederhana. Kelas IncomingRequest adalah representasi permintaan HTTP berorientasi objek. Ini menyediakan semua yang Anda butuhkan:
+
+<?php
+
+use CodeIgniter\HTTP\IncomingRequest;
+
+$request = request();
+
+// the URI path being requested (i.e., /about)
+$request->getUri()->getPath();
+
+// Retrieve $_GET and $_POST variables
+$request->getGet('foo');
+$request->getPost('foo');
+
+// Retrieve from $_REQUEST which should include
+// both $_GET and $_POST contents
+$request->getVar('foo');
+
+// Retrieve JSON from AJAX calls
+$request->getJSON();
+
+// Retrieve server variables
+$request->getServer('Host');
+
+// Retrieve an HTTP Request header, with case-insensitive names
+$request->header('host');
+$request->header('Content-Type');
+
+// Checks the HTTP method
+$request->is('get');
+$request->is('post');
+```
+Kelas permintaan melakukan banyak pekerjaan di latar belakang untuk Anda, sehingga Anda tidak perlu khawatir. Metode isAJAX()dan isSecure()memeriksa beberapa metode berbeda untuk menentukan jawaban yang benar.
+
+CodeIgniter juga menyediakan kelas Response yang merupakan representasi respon HTTP berorientasi objek. Ini memberi Anda cara yang mudah dan ampuh untuk membangun respons Anda terhadap klien:
+
+```
+<?php
+
+use CodeIgniter\HTTP\Response;
+
+$response = response();
+
+$response->setStatusCode(Response::HTTP_OK);
+$response->setBody($output);
+$response->setHeader('Content-Type', 'text/html');
+$response->noCache();
+
+// Sends the output to the browser
+// This is typically handled by the framework
+$response->send();
+```
+
+Selain itu, kelas Response memungkinkan Anda menggunakan lapisan cache HTTP untuk performa terbaik.
+
+
+### 5. General Topics
+
+- AJAX Requests
+
+Metode ini IncomingRequest::isAJAX()menggunakan X-Requested-Withheader untuk menentukan apakah permintaan tersebut XHR atau normal. Namun, implementasi JavaScript terbaru (yaitu, ambil) tidak lagi mengirimkan header ini bersama permintaan, sehingga penggunaan IncomingRequest::isAJAX()menjadi kurang dapat diandalkan, karena tanpa header ini tidak mungkin untuk menentukan apakah permintaan tersebut XHR atau tidak.
+
+Untuk mengatasi masalah ini, solusi paling efisien (sejauh ini) adalah dengan menentukan header permintaan secara manual, memaksa informasi dikirim ke server, yang kemudian akan dapat mengidentifikasi bahwa permintaan tersebut adalah XHR.
+
+Berikut cara memaksa X-Requested-Withheader dikirim di Fetch API dan pustaka JavaScript lainnya.
+
+- Ambil API
+
+- jQuery
+
+- VueJS
+
+- Reaksi
+
+- htmx
