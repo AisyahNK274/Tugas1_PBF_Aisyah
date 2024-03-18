@@ -190,7 +190,7 @@ Berikut tampilan jika mengarah ke "http://localhost:8080/home"
 
 - Buat database untuk digunakan
 
-Diperlukan database kemudian mengkonfigurasi CodeIgniter untuk menggunakannya.
+Diperlukan database baru bernama ci4tutorial. Kemudian buat tabel bernama News. Isikan tabel tersebut sesuai dengan struktur. Lakukan konfigurasi CodeIgniter.
 ```
 CREATE TABLE news (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -218,3 +218,19 @@ database.default.DBDriver = MySQLi
 Model bertugas mengelola database, komputasi program, request validasi controller, dan manipulasi data. Bagian ini menyimpan business/ domain logic. Logika bisnis yang dimaksud itu sendiri yaitu alur program untuk mengelola perputaran informasi. Fungsi lainnya yaitu membuat user interface dan database terhubung. 
 
 - Buat model berita
+
+Buka direktori app/Models dan buat file baru bernama NewsModel.php dan tambahkan kode berikut.
+```
+<?php
+
+namespace App\Models;
+
+use CodeIgniter\Model;
+
+class NewsModel extends Model
+{
+    protected $table = 'news';
+}
+```
+
+Kode diatas akan menciptakan model baru dengan memperluas CodeIgniter\Modeldan memuat perpustakaan database. Ini akan membuat kelas database tersedia melalui $this->dbobjek.
