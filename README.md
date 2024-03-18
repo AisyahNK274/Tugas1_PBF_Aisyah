@@ -43,6 +43,10 @@
 
   Langkah - langkah yang harus dilakukan :
 
-  1. Download Codeigniter;
-  2. Ekstrak File ZIP Codeigniter ke htdocs.
-  3. 
+  1. Download file zip dari CodeIgniter 4 melalui website resminya.
+  
+  ![image](https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/f5e0377d-9231-4980-99de-5e35e7f3721d)
+
+  2. Setelah file CodeIgniter 4 berhasil terdownload, pindahkan file ke folder C:/xampp/htdocs. Kemudian, extract file zip tersebut dan ubah namanya sesuai dengan nama project yang Anda inginkan. 
+  
+  3. Project CodeIgniter ini sudah bisa langsung dijalankan di web browser Anda dengan mengakses localhost/ci4/public. 
