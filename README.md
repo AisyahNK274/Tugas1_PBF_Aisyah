@@ -49,4 +49,7 @@
 
   2. Setelah file CodeIgniter 4 berhasil terdownload, pindahkan file ke folder C:/xampp/htdocs. Kemudian, extract file zip tersebut dan ubah namanya sesuai dengan nama project yang Anda inginkan. 
   
-  3. Project CodeIgniter ini sudah bisa langsung dijalankan di web browser Anda dengan mengakses localhost/ci4/public. 
+  3. Project CodeIgniter ini sudah bisa langsung dijalankan di web browser Anda dengan mengakses localhost/ci4/public.
+
+     <img width="546" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/4ea196d7-d731-4e72-9fab-6a9e9a4c01ed">
+
