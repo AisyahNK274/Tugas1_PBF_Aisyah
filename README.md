@@ -85,14 +85,46 @@ Tambahkan baris berikut, setelah arahan rute untuk '/'
 
 - Membuat Pengontrol Halaman
   
-<img width="278" alt="Screenshot 2024-03-18 114619" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/a04ee256-296f-43fa-8373-50cc69a2926d">
+Buat file di app/Controllers/Pages.php dengan kode berikut.
+```
+<?php
+
+namespace App\Controllers;
+
+class Pages extends BaseController
+{
+    public function index()
+    {
+        return view('welcome_message');
+    }
+
+    public function view($page = 'home')
+    {
+        // ...
+    }
+}
+```
 
 Kelas Pages memperluas BaseControllerkelas yang memperluas CodeIgniter\Controllerkelas. Ini berarti bahwa kelas Pages baru dapat mengakses metode dan properti yang ditentukan dalam CodeIgniter\Controllerkelas (system/Controller.php).
 
 - Membuat tampilan
   
 Buat header di app/Views/templates/header.php dan tambahkan kode berikut :
+```
+<!doctype html>
+<html>
+<head>
+    <title>CodeIgniter Tutorial</title>
+</head>
+<body>
+
+    <h1><?= esc($title) ?></h1>
+```
 
 Header berisi kode HTML dasar yang ingin Anda tampilkan sebelum memuat tampilan utama, bersama dengan judul. Ini juga akan menampilkan $titlevariabel, yang akan kita definisikan nanti di pengontrol. Sekarang, buat footer di app/Views/templates/footer.php yang menyertakan kode berikut :
-
+```
+<em>&copy; 2022</em>
+</body>
+</html>
+```
 - Menambahkan logika ke Controller
