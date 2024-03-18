@@ -129,7 +129,6 @@ File dan nama direktori apa pun yang dimasukkan ke dalam view()fungsi HARUS coco
 
 - Menjalankan Aplikasi
 Masukkan perintah "php spark serve" pada cmd terminal. Kemudian akan muncul alamat localhost. Untuk memulai server web, dapat diakses pada port 8080. Jika Anda mengatur field lokasi di browser Anda ke localhost:8080, Anda akan melihat halaman selamat datang CodeIgniter.
-
 <img width="544" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/177ebefc-d158-47c0-ac7d-efabfc789e69">
 
 Berikut tampilan jika mengarah ke "http://localhost:8080/home"
@@ -295,6 +294,7 @@ Satu-satunya hal yang perlu dilakukan adalah membuat tampilan terkait di app/Vie
 ```
 Arahkan browser Anda ke halaman “berita”, yaitu localhost:8080/news.
 ### 4. CodeIgniter Overview
+
 #### Bekerja dengan permintaan HTTP
 HTTP adalah istilah yang digunakan untuk menggambarkan konvensi pertukaran itu. Itu singkatan dari HyperText Transfer Protocol. Tujuan Anda saat mengembangkan aplikasi web adalah untuk selalu memahami apa yang diminta browser, dan mampu merespons dengan tepat.
 - Permintaan
@@ -323,7 +323,6 @@ Responsnya memberi tahu klien versi spesifikasi HTTP apa yang digunakannya dan, 
 
 - Bekerja dengan permintaan dan tanggapan
 
-```
 Meskipun PHP menyediakan cara untuk berinteraksi dengan header permintaan dan respons, CodeIgniter, seperti kebanyakan kerangka kerja, mengabstraksikannya sehingga Anda memiliki antarmuka yang konsisten dan sederhana. Kelas IncomingRequest adalah representasi permintaan HTTP berorientasi objek. Ini menyediakan semua yang Anda butuhkan:
 ```
 <?php
