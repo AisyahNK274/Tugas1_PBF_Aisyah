@@ -1,0 +1,423 @@
+ERROR - 2024-03-18 08:14:09 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(15): App\Models\NewsModel->getNews()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(15): App\Models\NewsModel->getNews()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#12 {main}
+CRITICAL - 2024-03-18 08:14:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\News.php(15): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\News->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semester 4\\CI4_AISYAH\\public\\index.php')
+ERROR - 2024-03-18 08:18:33 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#12 {main}
+CRITICAL - 2024-03-18 08:18:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\News.php(16): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\News->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semester 4\\CI4_AISYAH\\public\\index.php')
+ERROR - 2024-03-18 08:18:35 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#12 {main}
+CRITICAL - 2024-03-18 08:18:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\News.php(16): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\News->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semester 4\\CI4_AISYAH\\public\\index.php')
+ERROR - 2024-03-18 08:20:32 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#12 {main}
+CRITICAL - 2024-03-18 08:20:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\News.php(16): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\News->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semester 4\\CI4_AISYAH\\public\\index.php')
+ERROR - 2024-03-18 08:20:47 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#12 {main}
+CRITICAL - 2024-03-18 08:20:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\News.php(16): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\News->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semester 4\\CI4_AISYAH\\public\\index.php')
+ERROR - 2024-03-18 08:20:47 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#12 {main}
+CRITICAL - 2024-03-18 08:20:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\News.php(16): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\News->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semester 4\\CI4_AISYAH\\public\\index.php')
+ERROR - 2024-03-18 08:20:48 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#12 {main}
+CRITICAL - 2024-03-18 08:20:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\News.php(16): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\News->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semester 4\\CI4_AISYAH\\public\\index.php')
+ERROR - 2024-03-18 08:25:57 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#12 {main}
+CRITICAL - 2024-03-18 08:25:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\News.php(16): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\News->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semester 4\\CI4_AISYAH\\public\\index.php')
+ERROR - 2024-03-18 08:26:12 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', '', '', '', 3306, '', 0)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Kuliah\Semester 4\CI4_AISYAH\app\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\Kuliah\Semester 4\CI4_AISYAH\app\Controllers\News.php(16): App\Models\NewsModel->getNews()
+#7 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(941): App\Controllers\News->index()
+#8 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+#9 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Kuliah\Semester 4\CI4_AISYAH\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 D:\Kuliah\Semester 4\CI4_AISYAH\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semes...')
+#12 {main}
+CRITICAL - 2024-03-18 08:26:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `news`', [], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\NewsModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\News.php(16): App\Models\NewsModel->getNews()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\News->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\News))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Kuliah\\Semester 4\\CI4_AISYAH\\public\\index.php')
