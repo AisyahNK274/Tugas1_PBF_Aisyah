@@ -128,3 +128,5 @@ Header berisi kode HTML dasar yang ingin Anda tampilkan sebelum memuat tampilan 
 </html>
 ```
 - Menambahkan logika ke Controller
+
+Badan halaman statis akan ditempatkan di direktori app/Views/pages. Di direktori itu, buatlah dua file bernama home.php dan about.php. Di dalam file tersebut, ketikkan beberapa teks - apa pun yang Anda suka - dan simpan.
