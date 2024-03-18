@@ -185,6 +185,18 @@ Masukkan perintah "php spark serve" pada cmd terminal. Kemudian akan muncul alam
 
 - Buat database untuk digunakan
 
+Diperlukan database kemudian mengkonfigurasi CodeIgniter untuk menggunakannya.
+```
+CREATE TABLE news (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    title VARCHAR(128) NOT NULL,
+    slug VARCHAR(128) NOT NULL,
+    body TEXT NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE slug (slug)
+);
+```
+
 - Hubungkan ke Basis Data
 
 File konfigurasi lokal, .env , yang telah  di buat saat menginstal CodeIgniter, harus memiliki pengaturan properti database yang tidak diberi komentar dan disetel dengan tepat untuk database yang ingin digunakan.
@@ -194,4 +206,10 @@ database.default.database = ci4
 database.default.username = root
 database.default.password = root
 database.default.DBDriver = MySQLi
-```s
+```
+
+- Siapkan Model
+
+Model bertugas mengelola database, komputasi program, request validasi controller, dan manipulasi data. Bagian ini menyimpan business/ domain logic. Logika bisnis yang dimaksud itu sendiri yaitu alur program untuk mengelola perputaran informasi. Fungsi lainnya yaitu membuat user interface dan database terhubung. 
+
+- Buat model berita
