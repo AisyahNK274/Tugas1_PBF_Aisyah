@@ -1,7 +1,9 @@
 ### Tugas1_PBF_Aisyah
 
 # CodeIgniter
+
 ### 1. Pengertian
+
   CodeIgniter adalah kerangka pengembangan aplikasi yang dikembangkan pada tahun 2006 oleh Rick Ellis. CodeIgniter digunakan untuk membangun situs web dengan menggunakan konsep Model-View-Controller (MVC). Model-View-Controller (MVC) adalah praktik standar industri yang memisahkan data, logika, dan presentasi dalam aplikasi web. Penggunaan CodeIgniter bertujuan untuk mempercepat dan menyederhanakan proses pengembangan proyek. 
 #### Framework ini cocok untuk apa saja?
 - Jika Anda menginginkan sebuah kerangka kerja dengan ukuran yang kecil.
@@ -19,6 +21,7 @@
 - Memiliki fitur bawaan untuk melindungi aplikasi dari ancaman umum seperti XSS, CSRF, dan SQL injection sehingga dapat mengurangi risiko keamanan tanpa mengubah fundamental cara kerja aplikasi.
 
 - CodeIgniter didesain dengan antarmuka yang sederhana dan intuitif, sehingga mudah digunakan bagi developer pemula sekalipun.
+
 ### 2. Cara Instalasi
   CodeIgniter memiliki dua metode instalasi yang didukung yaitu download manual dan menggunakan Composer.
   
@@ -130,3 +133,6 @@ Header berisi kode HTML dasar yang ingin Anda tampilkan sebelum memuat tampilan 
 - Menambahkan logika ke Controller
 
 Badan halaman statis akan ditempatkan di direktori app/Views/pages. Di direktori itu, buatlah dua file bernama home.php dan about.php. Di dalam file tersebut, ketikkan beberapa teks - apa pun yang Anda suka - dan simpan.
+
+<img width="99" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/b94bf39c-8b5e-49ba-b6b5-624890fa45f4">
+
