@@ -412,3 +412,39 @@ Satu-satunya hal yang perlu dilakukan adalah membuat tampilan terkait di app/Vie
 ```
 
 Arahkan browser Anda ke halaman “berita”, yaitu localhost:8080/news.
+
+
+### 4. CodeIgniter Overview
+
+#### Bekerja dengan permintaan HTTP
+
+HTTP adalah istilah yang digunakan untuk menggambarkan konvensi pertukaran itu. Itu singkatan dari HyperText Transfer Protocol. Tujuan Anda saat mengembangkan aplikasi web adalah untuk selalu memahami apa yang diminta browser, dan mampu merespons dengan tepat.
+
+- Permintaan
+
+Setiap kali klien (browser web, aplikasi ponsel cerdas, dll) membuat permintaan, ia mengirimkan pesan teks kecil ke server dan menunggu tanggapan.
+
+Permintaannya akan terlihat seperti ini:
+```
+GET / HTTP/1.1
+Host codeigniter.com
+Accept: text/html
+User-Agent: Chrome/46.0.2490.80
+```
+Pesan ini menampilkan semua informasi yang diperlukan untuk mengetahui apa yang diminta klien. Ini memberitahukan metode permintaan (GET, POST, DELETE, dll), dan versi HTTP yang didukungnya.
+
+- Responnya
+
+Setelah server menerima permintaan, aplikasi Anda akan mengambil informasi tersebut dan menghasilkan beberapa output. Server akan menggabungkan keluaran Anda sebagai bagian dari responsnya terhadap klien. Ini juga direpresentasikan sebagai pesan teks sederhana yang terlihat seperti ini:
+```
+HTTP/1.1 200 OK
+Server: nginx/1.8.0
+Date: Thu, 05 Nov 2015 05:33:22 GMT
+Content-Type: text/html; charset=UTF-8
+
+<html>
+    . . .
+</html>
+```
+
+Responsnya memberi tahu klien versi spesifikasi HTTP apa yang digunakannya dan, mungkin yang paling penting, kode status (200). Kode status adalah salah satu dari sejumlah kode yang telah distandarisasi agar memiliki arti yang sangat spesifik bagi klien. Ini dapat memberi tahu mereka bahwa halaman tersebut berhasil (200), atau bahwa halaman tersebut tidak ditemukan (404). 
