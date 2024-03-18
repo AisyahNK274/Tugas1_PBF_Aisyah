@@ -254,3 +254,23 @@ Dua metode yang digunakan di sini, findAll()dan first(), disediakan oleh CodeIgn
 - Tampilkan Berita
 
 Setelah kueri ditulis, model harus dikaitkan dengan tampilan yang akan menampilkan item berita kepada pengguna. Ini bisa dilakukan di Pagespengontrol yang kami buat sebelumnya, tetapi demi kejelasan, Newspengontrol baru telah ditentukan.
+
+-Menambahkan Aturan Perutean
+
+Ubah file app/Config/Routes.php dengan kode berikut :
+```
+<?php
+
+// ...
+
+use App\Controllers\News; // Add this line
+use App\Controllers\Pages;
+
+$routes->get('news', [News::class, 'index']);           // Add this line
+$routes->get('news/(:segment)', [News::class, 'show']); // Add this line
+
+$routes->get('pages', [Pages::class, 'index']);
+$routes->get('(:segment)', [Pages::class, 'view']);
+```
+
+Hal ini memastikan permintaan mencapai Newspengontrol alih-alih langsung ke Pagespengontrol. Baris kedua $routes->get()merutekan URI dengan slug ke show()metode di Newspengontrol.
