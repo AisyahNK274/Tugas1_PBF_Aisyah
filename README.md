@@ -181,6 +181,11 @@ Masukkan perintah "php spark serve" pada cmd terminal. Kemudian akan muncul alam
 
 <img width="544" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/177ebefc-d158-47c0-ac7d-efabfc789e69">
 
+Berikut tampilan jika mengarah ke "http://localhost:8080/home"
+
+<img width="215" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/b3b84705-ad0e-48f8-8a1d-9e2ebc495e39">
+
+
 2. Buat Item Berita
 
 - Buat database untuk digunakan
