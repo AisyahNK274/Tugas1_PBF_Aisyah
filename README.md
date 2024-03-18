@@ -129,6 +129,7 @@ File dan nama direktori apa pun yang dimasukkan ke dalam view()fungsi HARUS coco
 
 - Menjalankan Aplikasi
 Masukkan perintah "php spark serve" pada cmd terminal. Kemudian akan muncul alamat localhost. Untuk memulai server web, dapat diakses pada port 8080. Jika Anda mengatur field lokasi di browser Anda ke localhost:8080, Anda akan melihat halaman selamat datang CodeIgniter.
+
 <img width="544" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/177ebefc-d158-47c0-ac7d-efabfc789e69">
 
 Berikut tampilan jika mengarah ke "http://localhost:8080/home"
@@ -185,6 +186,7 @@ Dengan kode ini, dapat melakukan dua kueri berbeda. Kita juga bisa mendapatkan s
 Dua metode yang digunakan di sini, findAll()dan first(), disediakan oleh CodeIgniter\Modelkelas. Mereka sudah mengetahui tabel yang akan digunakan berdasarkan $table properti yang kita atur di NewsModelkelas tadi. Mereka adalah metode pembantu yang menggunakan Pembuat Kueri untuk menjalankan perintahnya pada tabel saat ini, dan mengembalikan serangkaian hasil dalam format pilihan Anda. Dalam contoh ini, findAll()mengembalikan array dari array.
 - Tampilkan Berita
 Setelah kueri ditulis, model harus dikaitkan dengan tampilan yang akan menampilkan item berita kepada pengguna. Ini bisa dilakukan di Pagespengontrol yang kami buat sebelumnya, tetapi demi kejelasan, Newspengontrol baru telah ditentukan.
+
 - Menambahkan Aturan Perutean
 Ubah file app/Config/Routes.php dengan kode berikut :
 ```
@@ -198,6 +200,7 @@ $routes->get('pages', [Pages::class, 'index']);
 $routes->get('(:segment)', [Pages::class, 'view']);
 ```
 Hal ini memastikan permintaan mencapai Newspengontrol alih-alih langsung ke Pagespengontrol. Baris kedua $routes->get()merutekan URI dengan slug ke show()metode di Newspengontrol.
+
 - Buat pengontrol berita
 Buat pengontrol baru di app/Controllers/News.php dengan kode berikut :
 ```
