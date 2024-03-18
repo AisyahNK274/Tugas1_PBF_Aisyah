@@ -136,3 +136,49 @@ Badan halaman statis akan ditempatkan di direktori app/Views/pages. Di direktori
 
 <img width="99" alt="image" src="https://github.com/AisyahNK274/Tugas1_PBF_Aisyah/assets/134478695/b94bf39c-8b5e-49ba-b6b5-624890fa45f4">
 
+- Melengkapi halaman view() dengan menyertakan kode berikut :
+```
+<?php
+
+namespace App\Controllers;
+
+use CodeIgniter\Exceptions\PageNotFoundException; // Add this line
+
+class Pages extends BaseController
+{
+    // ...
+
+    public function view($page = 'home')
+    {
+        if (! is_file(APPPATH . 'Views/pages/' . $page . '.php')) {
+            // Whoops, we don't have a page for that!
+            throw new PageNotFoundException($page);
+        }
+
+        $data['title'] = ucfirst($page); // Capitalize the first letter
+
+        return view('templates/header', $data)
+            . view('pages/' . $page)
+            . view('templates/footer');
+    }
+}
+```
+Jika halaman yang diminta tidak ada, kesalahan “Halaman 404 tidak ditemukan” akan ditampilkan.
+
+Baris pertama dalam metode ini memeriksa apakah halaman tersebut benar-benar ada. Fungsi asli PHP is_file()digunakan untuk memeriksa apakah file berada di tempat yang diharapkan. Ini PageNotFoundExceptionadalah pengecualian CodeIgniter yang menyebabkan halaman kesalahan default ditampilkan.
+
+Di templat header, $titlevariabel digunakan untuk menyesuaikan judul halaman. Nilai title didefinisikan dalam metode ini, namun memberikan nilai ke variabel, nilai tersebut diberikan ke elemen title dalam array $data.
+
+Hal terakhir yang harus dilakukan adalah memuat tampilan sesuai urutan tampilannya. Fungsi view()bawaan CodeIgniter akan digunakan untuk melakukan hal ini. Parameter kedua dalam view() fungsi digunakan untuk meneruskan nilai ke tampilan. Setiap nilai dalam $dataarray ditugaskan ke variabel dengan nama kuncinya. Jadi nilai $data['title']di controller setara dengan $titledi view.
+
+#### Catatan!! 
+
+File dan nama direktori apa pun yang dimasukkan ke dalam view()fungsi HARUS cocok dengan huruf besar dan kecil dari direktori sebenarnya dan nama file itu sendiri atau sistem akan memunculkan kesalahan pada platform yang peka huruf besar/kecil.
+
+- Menjalankan Aplikasi
+
+Masukkan perintah "php spark serve" pada cmd terminal. Kemudian akan muncul alamat localhost. Untuk memulai server web, dapat diakses pada port 8080. Jika Anda mengatur field lokasi di browser Anda ke localhost:8080, Anda akan melihat halaman selamat datang CodeIgniter.
+
+
+
+
